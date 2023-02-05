@@ -1,0 +1,75 @@
+<body>
+    <header>
+        <section>
+            <section><img src="assets/logo.png" alt="My diabetes Logo"></section>
+            <ul>
+                <li><a href="/logIn"><button class = "clear signin-btn" type="button">Log In</button></a></li>
+                <li><a href="/pa_SignUp"><button class= "clear signup-btn" type="button">Sign Up</button></a></li>
+            </ul>
+        </section>
+        <nav>
+            <button class="hamburger1" id="hamburger1">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-ul"id="nav-ul">
+                <li><a href = "/"><button class = nav type="button">About Diabetes</button></a></li>
+                <li></li><a href = "/aboutUs"><button class = nav type="button">About Us</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <div class="register-patient">
+                <h2>New To Diabetes@Home?</h2>
+                <p>
+                    My diabetes HOME™ is a committed team of medical professionals united by the common goal of supporting those who have diabetes or whose love ones do. Our main principle is to place patients at the heart of all initiatives. We aim to ensure a well-supported and caring experience as patients commence their journey from one setting to another. 
+                </p>
+                <p>
+                    Register your patient below and start monitoring.
+                </p>
+                <a href="/pa_SignUp"><button class="btn1" type="button">Register for your patient</button></a>
+            </div>
+            <div class="login-form">
+                <h2 style = "color:#1C4A9F" class="panel-heading">Existing Clinician Login</h2>
+                <div class="panel">
+                    <h3 class="panel-title">Diabetes@Home Clincians-Log in Here</h3>
+                    <form class="panel-body" action="/login" method="post">
+                        <div id = "email" class="login-input">
+                            <label for="username">Email</label>
+                            <input id="username" name="username" type="text" autocomplete="username" required autofocus/>
+                        </div>
+                        <div id = "password" class="login-input">
+                            <label for="password">Password</label>
+                            <input id="password" name="password" type="password" autocomplete="password" required />
+                        </div>
+                        <div class="password-login">
+                            <a href="/forgetPassword" class="password-recover">Forget your password</a>
+                            <button class = "login" type="submit">Log In</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="login-form">
+                <h2 style = "color:#1C4A9F" class="panel-heading">Existing Patient Login</h2>
+                <div class="panel">
+                    <h3 class="panel-title">Diabetes@Home Patient-Log in Here</h3>
+                    <form class="panel-body" action="/login" method="post">
+                        <div id = "email" class="login-input">
+                            <label for="username">Email</label>
+                            <input id="username" name="username" type="text" autocomplete="username" required autofocus/>
+                        </div>
+                        <div id = "password" class="login-input">
+                            <label for="password">Password</label>
+                            <input id="password" name="password" type="password" autocomplete="password" required />
+                        </div>
+                        <div class="password-login">
+                            <a href="/forgetPassword" class="password-recover">Forget your password</a>
+                            <button class = "login" type="submit">Log In</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>

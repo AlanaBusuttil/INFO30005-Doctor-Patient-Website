@@ -1,0 +1,17 @@
+const mongoose = require('mongoose')
+const schema = new mongoose.Schema({
+    firstName: String,
+    lastName: String,
+    blood_sugar:Number,
+    weight: Number,
+    insulin_does: Number,
+    step_count:Number,
+    patient_id: Number,
+    blood_sugar_lower: Number,
+    blood_sugar_upper: Number,
+    note:String,
+
+})
+const latestRecords = mongoose.model('latestRecords', schema)
+console.log("connected with latestRecord collection")
+module.exports = latestRecords

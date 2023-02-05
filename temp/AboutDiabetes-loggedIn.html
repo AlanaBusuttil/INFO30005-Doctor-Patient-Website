@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <script src="https://kit.fontawesome.com/9b8360d87b.js" crossorigin="anonymous"></script>
+    <title>About Diabetes</title>
+</head>
+<body>
+    <header>
+        <section>
+            <section><img src="assets/logo.png" alt="My diabetes Logo"></section>
+            <ul>
+                <li><a href="AboutDiabetes.html"><button class = "clear signout-btn" type="button">Sign out</button></a></li>
+                <li><a href="patient-messages.html"><i class="fa-regular fa-bell fa-2x"></i></i></a></li>
+                <li><a href="clinician-dashboard.html"><i class="fa-regular fa-circle-user fa-2x"></i></a></li>
+            </ul>
+        </section>
+        <nav>
+            <button class="hamburger1" id="hamburger1">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-ul"id="nav-ul">
+                <li><a href = "AboutDiabetes.html"><button class = nav type="button">About Diabetes</button></a></li>
+                <li><a href = "AboutUs.html"><button class = nav type="button">About Us</button></a></li>
+                <li><a href = "clinician-dashboard.html"><button class = nav type="button">Dashboard</button></a></li>
+                <li><a href = "patient-signup.html"><button class = nav type="button">Sign-up Patient</button></a></li> 
+            </ul>
+        </nav>
+    </header>
+    <section class="banner"style="background-image: url('assets/sugar_monitor.jpg')">
+        <section>
+            <h1 id = "Title">About Diabetes</h1>
+            <p>Diabetes is a chronic diease that affects how your body transforms food into energy</p>
+            <button class = blue type="button">Sign Up</button>
+        </section>
+
+    </section>
+
+    <main>
+        <nav>
+            <li><a href= "#Type1"> <button class = "nav nav1" type="button">Type 1 Diabetes</button></a></li>
+            <li><a href= "#Type2"><button class = "nav nav1" type="button">Type 2 Diabetes</button></a></li>
+            <li><a href= "#Gestational"><button class = "nav nav1" type="button">Gestational Diabetes</button></a></li>
+        </nav>
+
+        <section class="container">
+            <video width="50%" height="100%" controls>
+                <source src="assets/Diabetes_Video.mp4" type="video/mp4">
+            </video>
+            <section>
+                <h2>What is Diabetes?</h2>
+                <p>Diabetes is a serious complex condition which can affect the entire body. 
+                Diabetes requires daily self care and if complications develop, diabetes can 
+                have a significiant impact on quality of life and can reduce life expectancy. 
+                While there is currently no cure for diabetes, you can live an enjoyable life by 
+                learning about the condition and effectively managing it. 
+                </p>
+                <a href = "AboutUs.html"><button class = blue type="button">Find out how Diabetes@Home Can Help</button></a>
+            </section>
+        </section>
+
+        <section id = "Type1" class="container">
+            <section>
+                <h2>Type 1 Diabetes</h2>
+                <p>Type 1 Diabetes is an autoimmune condition in which the immune system 
+                    is activated to desotry the cells in the pancreas which produce insulin. 
+                    Type 1 Diabetes is not linked to modifiable lifestyle factors. There is 
+                    no cure and it cannot be prevented. </p>
+                    
+                    <p>Consult your doctor if you notice any <a href ="https://www.mayoclinic.org/diseases-conditions/type-1-diabetes/symptoms-causes/syc-20353011">symptoms</a> in you or your child. 
+                </p>
+            </section>
+            <img src = "assets/needles.jpg" alt="needles">
+        </section>
+        <section id= "Type2" class="container">
+            <img src = "assets/person_running.jpg" alt="person running" size:>
+            <section>
+                <h2>Type 2 Diabetes</h2>
+                <p>Type 2 diabetes is a condition in which the body becomes resistant to the normal effects of insulin and gradually loses the capacity to produce enough insulin in the pancreas. 
+                    The condition has strong genetic and family related (non-modifiable) risk factors and is also often associated with modifiable lifestyle risk factors.</p>
+                    
+                <p>Is common for people with type 2 diabetes to display no symptoms. In some cases,<a href ="https://www.healthline.com/health/type-2-diabetes#symptoms">symptoms</a> may be present. Consult you doctor if you experience any possible <a href ="https://www.healthline.com/health/type-2-diabetes#symptoms">symptoms</a>. 
+                </p> 
+            </section>
+        </section>
+
+        <section id = "Gestational" class="container">
+            <section>
+                <h2>Gestational Diabetes</h2>
+                <p>
+                    Gestational diabetes mellitus (sometimes referred to as GDM) is a form of diabetes that occurs during pregnancy.
+                    Most women will no longer have diabetes after the baby is born. However, some women will continue to have high 
+                    blood glucose levels after deliver. It is diagnosed when higher than normal blood glucose levels first appear during 
+                    pregnancy.
+
+                    In most cases, gestational diabetes doesn't show noticeable signs or symptoms. Increased thirst and more frequent urination are possible symptoms.
+                </p>
+            </section>
+            <img src = "assets/pregnancy.jpg" alt="pregnancy">
+        </section>
+    </main>
+
+    <footer>
+        <section>
+            <p>Diabetes@Home 2022</p>
+            <p>All Rights Reserved</p>
+        </section>
+        <nav>
+            <ul>
+                <li href="#">About Diabetes</li>
+                <li href="#">About Us</li>
+                <li href="#">Sign Up</li>
+                <li href="#">Sign In</li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li><a href=""><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href=""><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+            </ul>
+        </nav>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </footer>
+    <script src="./js/main.js"></script>
+    
+</body>
+</html>

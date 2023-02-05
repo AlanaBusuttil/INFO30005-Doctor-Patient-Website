@@ -1,0 +1,81 @@
+<body>
+    <header>
+        <section>
+            <section><img src="assets/logo.png" alt="My diabetes Logo"></section>
+            <ul>
+                <li><a href="/"><button class = "clear signout-btn" type="button">Sign out</button></a></li>
+                <li><a href="/pa_Messages"><i class="fa-regular fa-bell fa-2x"></i></i></a></li>
+                <li><a href="/dashboard"><i class="fa-regular fa-circle-user fa-2x"></i></a></li>
+            </ul>
+        </section>
+        <nav>
+            <button class="hamburger1" id="hamburger1">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-ul"id="nav-ul">
+                <li><a href = "/"><button class = nav type="button">About Diabetes</button></a></li>
+                <li><a href = "/aboutUs"><button class = nav type="button">About Us</button></a></li>
+                <li><a href = "/dashboard"><button class = nav type="button">Dashboard</button></a></li>
+                <li><a href = "/pa_SignUp"><button class = nav type="button">Sign-up Patient</button></a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-content">
+        <section class="patient-table">
+            <section class="patient-title">
+                <section class="patient-key">
+                    <h2>Your Patients</h2>
+                    <section class="dots">
+                        <div class="dot"id="yellow-dot"></div>
+                        <p>Not Updated</p>
+                        <div class="dot"id="red-dot"></div>
+                        <p>Attention Needed</p>
+                        <a href="/pa_Messages"><i class="fa-regular fa-message"></i></a>
+                    </section>
+                </section>
+                <section class="page-arrow">
+                    <a><i class="fa-solid fa-angle-left"></i></a>
+                    <button class="number-1">1</button>
+                    <a href="/dashboard2"><button class="number-2">2</button></a>
+                    <a><i class="fa-solid fa-angle-right"></i></a>
+                </section>
+            </section>
+            <table class="patient-data">
+                <tr>
+                    <th>Patient ID</th>
+                    <th>Patient Name</th>
+                    <th>Blood Glucose</th>
+                    <th>Insulin Doses</th>
+                    <th>Step Count</th>
+                    <th>Weight</th>
+                    <th>Notes</th>
+                </tr>
+                
+                {{#each data}}
+                <tr class="table-content1">
+                    <td class="id">{{this.patient_id}}</td>
+                    <td class="patient-name"><a class="patient-summaries"href="/clinician/Dashboard/{{this.patient_id}}">{{this.firstName}} {{this.lastName}}</a></td>
+                    <!-- Pat's safety limits are hard coded into this handlerbars help function-->
+                    {{#danger this.blood_sugar 4 7.8}}
+                    <td class = "red-alert">{{this.blood_sugar}}</td>
+                    {{else}}
+                    <td class="healthy-level">{{this.blood_sugar}}</td>
+                    {{/danger}}
+                    <td >{{this.insulin_does}}</td>
+                    <td >{{this.step_count}}</td>
+                    <td>{{this.weight}}</td>
+                    <td class="note-icon"><i href="/dashboard_ViewNote"class="fa-regular fa-note-sticky"></i></ion-icon></td>
+                </tr>
+                {{/each}}
+            </table>
+        </section>
+
+        <section class="side-note">
+            <h2>Notes</h2>
+            <section class="notepad">
+                <p>Select a Patient...</p>
+            </section>
+        </section>
+    </main>
+</body>

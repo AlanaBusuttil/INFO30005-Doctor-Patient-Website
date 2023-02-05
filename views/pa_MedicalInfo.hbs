@@ -1,0 +1,127 @@
+<body>
+    <header>
+        <section>
+            <section><img src="assets/logo.png" alt="My diabetes Logo"></section>
+            <h2 class="dr-name">Welcome Pat</h2>
+            <ul>
+                <li><a href="/"><button class = "clear signout-btn" type="button">Sign out</button></a></li>
+                <li><a href="/pa_Messages"><i class="fa-regular fa-bell fa-2x"></i></i></a></li>
+                <li><a href="/dashboard"><i class="fa-regular fa-circle-user fa-2x"></i></a></li>
+            </ul>
+        </section>
+        <nav>
+            <button class="hamburger1" id="hamburger1">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-ul"id="nav-ul">
+                <li><a href = "/"><button class = nav type="button">About Diabetes</button></a></li>
+                <li><a href = "/aboutUs"><button class = nav type="button">About Us</button></a></li>
+                <li><a href = "/dashboard"><button class = nav type="button">Dashboard</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-content">
+        <section class="patient-table">
+            <section class="patient-title">
+                <section class="patient-key">
+                    <a href=""><i class="fa-regular fa-circle-user fa-2x"></i></a>
+                    <h2>Pat (2123)</h2>
+                    <a href="/individualMessage"><i class="fa-regular fa-message"></i></a>
+                    <a href="/pa_MedicalInfo"><i class="fa-solid fa-notes-medical"></i></a>
+                    <section class="dots">
+                        <div class="dot"id="yellow-dot"></div>
+                        <p>Not Updated</p>
+                        <div class="dot"id="red-dot"></div>
+                        <p>Attention Needed</p>
+                    </section>
+                </section>
+                <section class="page-arrow2">
+                    <a><i class="fa-solid fa-angle-left"></i></a>
+                    <button class="number-1">1</button>
+                    <button class="number-2">2</button>
+                    <a><i class="fa-solid fa-angle-right"></i></a>
+                </section>
+            </section>
+            <table class="profile-data">
+                <tr>
+                    <th><ion-icon class="sign"name="remove-circle-outline"></ion-icon>Blood Glucose</th>
+                    <th><ion-icon name="remove-circle-outline"></ion-icon>Insulin Doses</th>
+                    <th><ion-icon name="remove-circle-outline"></ion-icon>Step Count</th>
+                    <th><ion-icon name="add-circle-outline"></ion-icon>Weight</th>
+                    <th>Date</th>
+                </tr>
+
+                {{#each data}}
+                <!-- Pat's safety limits are hard coded into this handlerbars help function-->
+                <tr class="table-content">
+                    <td class="healthy-level">{{this.blood_sugar}}</td>
+                    <td class="healthy-level">{{this.insulin_does}}</td>
+                    <td class="healthy-level">{{this.step_count}}</td>
+                    <td class="healthy-level">{{this.weight}}</td>
+                    <td class="date">{{this.date}}</td>
+                </tr>
+                {{/each}}
+            </table>
+        </section>
+        <section class="side-note">
+            <section class="patient-note">
+              <h2>Medical Information</h2>
+              <i class="fa-solid fa-angle-right"></i>
+              <h2>Pat</h2>
+              <a href="pa_Profile"><i class="fa-solid fa-xmark"></i></a>
+            </section>
+            
+            <section class="notepad2">
+                {{#each patientData}}
+                <section class="full-name">
+                    <h3>Full Name</h3>
+                    <p>{{firstName}} {{lastName}}</p>
+                </section>
+                <section class="birthday">
+                    <h3>Birthday (dd/mm/yyyy)</h3>
+                    <p>{{birthdate}}</p>
+                </section>
+                <section class="address">
+                    <h3>Address</h3>
+                    <p>{{Adress}}</p>
+                </section>
+                <section class="health-conditions">
+                    <h3>Chronic Health Conditions</h3>
+                    <p>Diabetes (2000) 
+                        Arthiritis
+                        </p>
+                </section>
+                <section class="medication">
+                    <h3>Medication List</h3>
+                    <p>{{Meds}}
+                    </p>
+                </section>
+                {{/each}}
+                <section class = "add-entry">
+                <form action="/Patient/Dashboard" id = "form"  method="POST">
+                    <label for="Blood Sugar">Blood sugar level (nmol/L):</label>
+                    <input type="number" step = "any" min="0" id="bsugar" name="bsugar"><br>
+                    
+                    <label for="Insulin">Doses of Insulin:</label>
+                    <input type="number" min="0" id="insulin" name="insulin"><br>
+
+                    <label for="Weight">Weight:</label>
+                    <input type="number" step = "any" min="0" id="weight" name="weight"><br>
+
+                    <label for="Steps">Steps:</label>
+                    <input type="number" min="0" id="steps" name="steps"><br>
+
+                    <label for="comment">Comment:</label>
+                    <input type="text" id="comment" name="comment"><br>
+
+                    <label for="Date">Date</label>
+                    <input type="date" id="Date" name="Date"><br>
+                    
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+            </section>
+        </section>
+    </main>
+</body>

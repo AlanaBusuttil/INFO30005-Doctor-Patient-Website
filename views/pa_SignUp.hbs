@@ -1,0 +1,77 @@
+<body>
+    <header>
+        <section>
+            <section><img src="assets/logo.png" alt="My diabetes Logo"></section>
+            <ul>
+                <li><a href="/"><button class = "clear signout-btn" type="button">Sign out</button></a></li>
+                <li><a href="/pa_Messages"><i class="fa-regular fa-bell fa-2x"></i></i></a></li>
+                <li><a href="/dashboard"><i class="fa-regular fa-circle-user fa-2x"></i></a></li>
+            </ul>
+        </section>
+        <nav>
+            <button class="hamburger1" id="hamburger1">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-ul"id="nav-ul">
+                <li><a href = "/index_LoggedIn"><button class = nav type="button">About Diabetes</button></a></li>
+                <li></li><a href = "/aboutUs_LoggedIn"><button class = nav type="button">About Us</button></a></li>
+                <li></li><a href = "/dashboard"><button class = nav type="button">Dashboard</button></a></li>
+                <li></li><a href = "/pa_SignUp"><button class = nav type="button">Sign-up Patient</button></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="center-content">
+            <h2>Sign up Patient</h2>
+            <form class="patient-input" action="/emailVerification" method="POST">
+                <section class="line"id="line-1">
+                    <div class="input"id="patient-email">
+                        <label for="email-input">Patient Email Address *</label>
+                        <input id="email-input" type="email" name="email" required> 
+                    </div>
+                    <div class="input" id="password">
+                        <label for="">Password *</label>
+                        <input id="Password-input"type="text" name="password" required>
+                    </div>
+                    <div class="input" id="address1">
+                        <label for="">Address Line 1 *</label>
+                        <input id="address1-input"type="text" name="address1" required>
+                    </div>
+                </section>
+                <section class="line"id="line-2">
+                    <div class="input" id="patient-name">
+                        <label for="name-input">Patient First Name *</label>
+                        <input id="name-input"type="email" name="fname" required> 
+                    </div>
+                    <div class="input"id="address2">
+                        <label for="address2-input">Address Line 2 *</label>
+                        <input id="address2-input"type="text" name="address2" required>
+                    </div>
+                </section>
+                <section class="line"id="line-3">
+                    <div class="input"id="last-name">
+                        <label for="lName-input">Patient Last Name *</label>
+                        <input id="lName-input"type="text" name="lname" required>
+                    </div>
+                    <div class="input"id="postcode">
+                        <label for="patient-postcode">Postcode *</label>
+                        <input id="patient-postcode"type="text" name="postcode" required>
+                    </div>
+                    <div class="input"id="suburb">
+                        <label for="patient-suburb">Suburb *</label>
+                        <input id="patient-suburb"type="text" name="suburb" required>
+                    </div>
+                </section>
+                <section class="line" id="line-4">
+                    <div class="input">
+                        <label for="birthday-input">Patient Birthday *</label>
+                        <input id="birthday-input"type="date" name="bday" required>   
+                    </div>
+                    <input type="submit" />
+                    <a href="/emailVerification"><button id="signup-btn"class="sign-up">Sign up</button></a>
+                </section>
+            </form>
+        </section>
+    </main>
+</body>

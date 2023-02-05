@@ -1,0 +1,38 @@
+{
+  "name": "info30005project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "prettier": "prettier --single-quote --no-semi --tab-width 4 --write**/*.js *.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonhuy/INFO30005PROJECT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonhuy/INFO30005PROJECT/issues"
+  },
+  "homepage": "https://github.com/jonhuy/INFO30005PROJECT#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.18.0",
+    "express-flash": "^0.0.2",
+    "express-handlebars": "^6.0.5",
+    "express-session": "^1.17.3",
+    "flash": "^1.1.0",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.3.3",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "prettier": "^2.6.2"
+  }
+}
